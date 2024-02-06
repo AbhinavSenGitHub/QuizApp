@@ -1,0 +1,35 @@
+.home {
+  color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  height: 100vh;
+
+  div {
+    margin-top: 100px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 30px;
+  }
+  div > h1 {
+    margin-bottom: 30px;
+    color: #ffffff;
+  }
+}
+a > button {
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  background-color: #ffffff;
+  color: #000000;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+button:hover {
+  background-color: #000000;
+  color: #ffffff;
+}

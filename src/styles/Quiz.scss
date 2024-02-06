@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Chivo+Mono:ital@1&family=Poppins:ital,wght@1,300;1,400&family=Rubik:wght@300&display=swap");
+
+.quiz-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px; /* Add padding to the top */
+  padding-bottom: 60px;
+  h1 {
+    color: rgb(255, 255, 255);
+  }
+  .timer{
+    color: #ffffff;
+    margin-top: 30px;
+  }
+  .question-section {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    .question-div {
+      background-color: #fff; // Set the background color
+      border: 1px solid #ddd; // Set the border color
+      border-radius: 8px; // Adjust the border-radius for rounded corners
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); // Add a subtle box shadow
+      padding: 20px; // Adjust the padding as needed
+      width: 70%;
+      margin-bottom: 50px;
+      h2 {
+        font-family: "Rubik", sans-serif;
+        margin-bottom: 10px;
+      }
+      .hr-link {
+        width: 90%;
+        margin-bottom: 10px;
+      }
+      > .answer-div {
+        ul {
+          list-style: none;
+          li { 
+            input[type="radio"] {
+            margin-right: 10px; /* Add margin-right to create space between radio button and text */
+          }
+        }
+        }
+      }
+    }
+  }
+  .quiz-button {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: #ffffff; /* Button background color */
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #000000; /* Button text color */
+    transition: background-color 0.3s ease;
+  }
+  .quiz-button:hover {
+    color: #ffffff;
+    background-color: black;
+  }
+
+  div > p{
+    color: #ffffff;
+    margin-top: 20px;
+  }
+}
