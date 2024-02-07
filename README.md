@@ -3,11 +3,11 @@
 A simple quiz app built using React.js and react-router-dom.
 
 ## Features
--> Users can answer 5 questions in 40 seconds.
--> Questions are fetched from an external API.
--> Answers are shuffled for each question.
--> Users can view their score after submitting answers.
--> Option to play again after viewing the score.
+- Users can answer 5 questions in 40 seconds.
+- Questions are fetched from an external API.
+- Answers are shuffled for each question.
+- Users can view their score after submitting answers.
+- Option to play again after viewing the score.  
 
 ### Technologies Used
 -> React.js
@@ -39,30 +39,10 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ## How to Play
 
-- [Start the quiz](#start-quiz) by clicking on the "Start Quiz" button on the homepage.
-- [Answer each question](#answer-questions) within the given time limit of 40 seconds.
-- [Submit your answers](#submit-answers) after answering all questions.
-- [View your score](#view-score) on the result page.
-- [Play again](#play-again) by clicking on the "Play Again" button.
-
-### Start Quiz
-
-Start the quiz by clicking on the "Start Quiz" button on the homepage.
-
-### Answer Questions
-
-Answer each question within the given time limit of 40 seconds.
-
-### Submit Answers
-
-After answering all questions, click on the "Submit" button.
-
-### View Score
-
-View your score on the result page.
-
-### Play Again
-
-To play again, click on the "Play Again" button.
+- Start the quiz by clicking on the "Start Quiz" button on the homepage.
+- Answer each question within the given time limit of 40 seconds.
+- After answering all questions, click on the "Submit" button.
+- View your score on the result page.
+- To play again, click on the "Play Again" button.
 
 
