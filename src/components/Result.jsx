@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 const Result = () => {
   const location = useLocation();
   const score = new URLSearchParams(location.search).get('score');
-  console.log("score: ", score)
+
   return (
     <div className="view-score">
       <h1>Your Score</h1>
@@ -19,9 +19,7 @@ const Result = () => {
       <Link to="/quiz">
         <button className="quiz-button">Play Again</button>
       </Link>
-
     </div>
-  )
+  );
 }
-
-export default Result
+export default Result;

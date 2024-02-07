@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 // shuffle incorrect answers with correct answer
 const shuffleOptions = (correctAnswer, incorrectAnswers) => {
   const allOptions = [correctAnswer, ...incorrectAnswers];
@@ -14,14 +15,14 @@ let getScore = 0;
 
 //quiz page 
 const Quiz = () => {
+  const navigate = useNavigate();
   const [questions, setQuestions] = useState([]);
   const [userAnswers, setUserAnswers] = useState({});
   const [showResult, setShowResult] = useState(false);
   const [timeUp, setTimeUp] = useState(false);
   // timmer
-  const quizDurationSeconds = 4; // (40 seconds)
+  const quizDurationSeconds = 40; // (40 seconds)
   const [timeRemaining, setTimeRemaining] = useState(quizDurationSeconds);
-
   const fetchQuestions = async () => {
     try {
       const response = await fetch('https://opentdb.com/api.php?amount=5&difficulty=medium');
@@ -47,7 +48,6 @@ const Quiz = () => {
     setShowResult(true);
     getScore = calculateCorrectAnswers();
     console.log(getScore);
-
     // Force state update immediately
     setUserAnswers(prevAnswers => ({ ...prevAnswers }));
   };
@@ -82,7 +82,7 @@ const Quiz = () => {
 
   const viewScore = () => {
     let resultUrl = `/result?score=${getScore}`;
-    window.location.href = resultUrl;
+    navigate(resultUrl); // Navigate to the result page
   }
   const calculateCorrectAnswers = () => {
     return questions.reduce((correctCount, question, index) => {
@@ -129,12 +129,10 @@ const Quiz = () => {
         <Link to="/">
           <button className="quiz-button">HOME</button>
         </Link>
-        
         {showResult &&
           <button onClick={viewScore} className="quiz-button">VIEW SCORE</button>
         }
       </div>
-      
       {timeUp && (
         <div>
           {timeRemaining === 0 ? <p>Time's up! Your response has been submitted</p> : <p>Your response has been submited</p>}
